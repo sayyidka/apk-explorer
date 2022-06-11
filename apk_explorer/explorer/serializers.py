@@ -9,6 +9,16 @@ class UserShortSerializer(serializers.ModelSerializer):
         fields = ("id", "username")
 
 
+class ApplicationShortSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Application
+        fields = (
+            "application",
+            "package_name",
+            "package_version_code",
+        )
+
+
 class ApplicationSerializer(serializers.ModelSerializer):
     application = serializers.CharField(max_length=200)
     package_name = serializers.CharField(max_length=200)
@@ -24,16 +34,6 @@ class ApplicationSerializer(serializers.ModelSerializer):
             "package_version_code",
             "icon",
             "owner",
-        )
-
-
-class ApplicationShortSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Application
-        fields = (
-            "application",
-            "package_name",
-            "package_version_code",
         )
 
 
