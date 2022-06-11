@@ -7,7 +7,11 @@ from rest_framework import status
 from rest_framework.parsers import MultiPartParser
 from explorer.models import Application
 from explorer.CustomPermissions import IsOwnerOrReadOnly, IsUserOrReadOnly
-from explorer.serializers import ApplicationSerializer, UserSerializer
+from explorer.serializers import (
+    ApplicationSerializer,
+    UserSerializer,
+    UserRegisterSerializer,
+)
 from explorer.DataExtractor import DataExtractor
 
 
@@ -149,7 +153,7 @@ class UsersRegister(APIView):
             "password": user_obj["password"],
             "email": user_obj["email"],
         }
-        serializer = UserSerializer(data=data)
+        serializer = UserRegisterSerializer(data=data)
         if serializer.is_valid():
             user = serializer.save()
             if user:
