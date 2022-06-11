@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from explorer.models import Application
 
-
+# Serializers for nested representations
 class UserShortSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -19,6 +19,7 @@ class ApplicationShortSerializer(serializers.ModelSerializer):
         )
 
 
+# Base serializers
 class ApplicationSerializer(serializers.ModelSerializer):
     application = serializers.CharField(max_length=200)
     package_name = serializers.CharField(max_length=200)

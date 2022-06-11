@@ -1,7 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
 class Application(models.Model):
+    """APK file model"""
+
     application = models.CharField(max_length=200)
     package_name = models.CharField(max_length=200)
     package_version_code = models.CharField(max_length=200)
