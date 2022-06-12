@@ -40,7 +40,7 @@ class TestApplications(APITestCase):
 
         # APK upload
         module_dir = os.path.dirname(__file__)
-        filepath = os.path.join(module_dir, "apk_examples/mi_launcher.apk")
+        filepath = os.path.join(module_dir, "explorer/apk_examples/mi_launcher.apk")
         data = File(open(filepath, "rb"))
         uploaded_file = SimpleUploadedFile(
             "apk", data.read(), content_type="multipart/form-data"
