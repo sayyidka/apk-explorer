@@ -11,3 +11,6 @@ class Application(models.Model):
     owner = models.ForeignKey(
         "auth.User", related_name="applications", on_delete=models.CASCADE
     )
+
+    def detail(self):
+        return f"application: {self.application}, package_name: {self.package_name}, owner: {self.owner}"
