@@ -17,7 +17,7 @@ The application runs at `http://127.0.0.1:8000`.
 
 ### Browse the API
 - A Postman collection `apk-explorer.postman_collection.json` with all the API endpoints is available in the root folder.
-- The database already contains 2 test users, each of them having uploaded one application.
+- The database already contains 2 test users, each of them having uploaded applications.
 - The API has a token based authentication. Except for GET endpoints, a token must be provided for all the others. This token can be retrieved with the `/api-token-auth/` endpoint, providing the user's username and password.
 
 ### Running tests
