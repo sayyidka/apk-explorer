@@ -8,7 +8,9 @@ An API to explore Android applications uploaded by Creators.
 
 ### Installation (Docker)  
 In the `apk_explorer` folder run the following command :  
-`docker-compose up`  
+```
+docker-compose up
+```  
 
 
 The application runs at `http://127.0.0.1:8000`.  
@@ -20,7 +22,9 @@ The application runs at `http://127.0.0.1:8000`.
 
 ### Running tests
 Run the following command:  
-`python manage.py test`
+```
+python manage.py test
+```
 
 ### Known limitations
 - The API runs on a SQLite database which is the default database for Django. As SQLite has sizes limits (maximum number of database, columns, length of string, ...), the number of creators and applications might be limited.
